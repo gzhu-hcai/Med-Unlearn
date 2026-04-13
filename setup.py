@@ -12,9 +12,9 @@ setuptools.setup(
     description="GRIN+: Towards Fast Yet Effective Machine Unlearning for Imbalanced Medical Data",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/HMH4Luckhaha/Med-Unlearn",
+    url="https://github.com/gzhu-hcai/Med-Unlearn",
     project_urls={
-        "Bug Tracker": "https://github.com/HMH4Luckhaha/Med-Unlearn/issues",
+        "Bug Tracker": "https://github.com/gzhu-hcai/Med-Unlearn/issues",
     },
     classifiers=[
         "Programming Language :: Python :: 3",
