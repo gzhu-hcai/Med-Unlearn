@@ -14,7 +14,7 @@ from .successive_random_labels import SuccessiveRandomLabels
 
 from .grin import GRINUnlearner
 from .grinv2 import GRINV2Unlearner
-from .grinplus import GRINPLUSUnlearner
+from .cadup import CADUPUnlearner
 from .BiO import BilevelOptimizationUnlearner
 from .fcu import FCUUnlearner
 from .forgetMI import ForgetMIUnlearner
