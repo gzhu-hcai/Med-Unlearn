@@ -246,7 +246,7 @@ METHODS_TO_READABLE = OrderedDict(
         "BiO": "BiO",
         "fcu": "FCU",
         "forgetMI": "ForgetMI",
-        "grinplus": "GRIN+",
+        "cadup": "CADUP",
     }
 )
 
@@ -267,7 +267,7 @@ METHODS_TO_COLOR = OrderedDict(
         "BiO": COLORS[10],
         "fcu": COLORS[11],
         "forgetMI": COLORS[12],
-        "grinplus": COLORS[13],
+        "cadup": COLORS[13],
     }
 )
 
@@ -292,7 +292,7 @@ METHODS_TO_MARKER = OrderedDict(
         "BiO": MARKERS[10],
         "fcu": MARKERS[11],
         "forgetMI": MARKERS[12],
-        "grinplus": MARKERS[13],
+        "cadup": MARKERS[13],
     }
 )
 
