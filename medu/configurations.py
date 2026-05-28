@@ -228,12 +228,12 @@ class GRINV2Unlearner:
 
 
 @dataclass
-@unlearner_store(name="grinplus")
-class GRINPLUSUnlearner:
-    from medu.unlearning.grinplus import DefaultGRINPLUSUnlearningConfig
+@unlearner_store(name="cadup")
+class CADUPUnlearner:
+    from medu.unlearning.cadup import DefaultCADUPUnlearningConfig
 
-    _target_: str = "medu.unlearning.GRINPLUSUnlearner"
-    cfg: DefaultGRINPLUSUnlearningConfig = field(default_factory=DefaultGRINPLUSUnlearningConfig)
+    _target_: str = "medu.unlearning.CADUPUnlearner"
+    cfg: DefaultCADUPUnlearningConfig = field(default_factory=DefaultCADUPUnlearningConfig)
     device: str = DEFAULT_DEVICE
 
 
