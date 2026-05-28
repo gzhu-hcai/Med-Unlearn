@@ -15,7 +15,7 @@ from medu.utils import DictConfig
 
 class GRINUnlearner(BaseUnlearner):
     """
-    Gradient Ratio-based Information Nullification (GRIN) unlearning method.
+    Gradient Ratio-based unlearning method.
     Implements sample-level unlearning by selectively perturbing parameters based on gradient ratios.
     """
     # Hyperparameters
