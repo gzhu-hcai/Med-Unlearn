@@ -15,7 +15,7 @@ UNLEARNERS = [
     "BiO",
     "fcu",
     "forgetMI",
-    "grinplus",
+    "cadup",
 ]
 ALL_UNLEARNERS = UNLEARNERS + REFERENCES
 OBJECTIVES = ["objective10"]
