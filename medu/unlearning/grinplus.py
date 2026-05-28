@@ -14,14 +14,14 @@ from medu.unlearning.common import BaseUnlearner
 from medu.utils import DictConfig
 
 
-class GRINPLUSUnlearner(BaseUnlearner):
+class CADUPUnlearner(BaseUnlearner):
     """
-    Gradient Ratio-based Information Nullification (GRIN) unlearning method.
+    Class-Adaptive Directional Unlearning via Parameter Perturbation.
     Implements sample-level unlearning by selectively perturbing parameters based on gradient ratios.
     Modified to use adversarial perturbations with class-balanced influence scores and gradient regularization.
     """
     # Hyperparameters
-    ORIGINAL_NUM_EPOCHS = 1  # GRIN doesn't require training epochs
+    ORIGINAL_NUM_EPOCHS = 1  # CADUP doesn't require training epochs
     ORIGINAL_BATCH_SIZE = 64
     ORIGINAL_SELECTION_RATIO = 0.5  # Select top 10% parameters
     ORIGINAL_ALPHA = 0.01  # Perturbation scale factor
@@ -234,7 +234,7 @@ class GRINPLUSUnlearner(BaseUnlearner):
         val_loader: DataLoader,
     ) -> Module:
         """
-        Optimized GRIN unlearning with class balancing and gradient regularization.
+        Optimized CADUP unlearning with class balancing and gradient regularization.
         Key optimization: Class weighting integrated into batch gradient computation.
         """
         device = self.device
@@ -297,7 +297,7 @@ class GRINPLUSUnlearner(BaseUnlearner):
         return model_unlearn
 
 
-def grinplus_default_optimizer():
+def cadup_default_optimizer():
     """Default optimizer configuration"""
     return {
         "type": "torch.optim.SGD",
@@ -310,17 +310,17 @@ def grinplus_default_optimizer():
 from medu.settings import DEFAULT_MODEL_INIT_DIR, default_loaders
 
 @dataclass
-class DefaultGRINPLUSUnlearningConfig:
-    """Default configuration for optimized GRIN unlearning"""
-    num_epochs: int = GRINPLUSUnlearner.ORIGINAL_NUM_EPOCHS
-    batch_size: int = GRINPLUSUnlearner.ORIGINAL_BATCH_SIZE
-    selection_ratio: float = GRINPLUSUnlearner.ORIGINAL_SELECTION_RATIO
-    alpha: float = GRINPLUSUnlearner.ORIGINAL_ALPHA
-    epsilon_percentile: float = GRINPLUSUnlearner.ORIGINAL_EPSILON_PERCENTILE
-    beta: float = GRINPLUSUnlearner.ORIGINAL_BETA
+class DefaultCADUPUnlearningConfig:
+    """Default configuration for optimized CADUP unlearning"""
+    num_epochs: int = CADUPUnlearner.ORIGINAL_NUM_EPOCHS
+    batch_size: int = CADUPUnlearner.ORIGINAL_BATCH_SIZE
+    selection_ratio: float = CADUPUnlearner.ORIGINAL_SELECTION_RATIO
+    alpha: float = CADUPUnlearner.ORIGINAL_ALPHA
+    epsilon_percentile: float = CADUPUnlearner.ORIGINAL_EPSILON_PERCENTILE
+    beta: float = CADUPUnlearner.ORIGINAL_BETA
 
     optimizer: typ.Dict[str, typ.Any] = field(
-        default_factory=grinplus_default_optimizer
+        default_factory=cadup_default_optimizer
     )
     scheduler: typ.Union[typ.Dict[str, typ.Any], None] = None
     criterion: typ.Union[typ.Dict[str, typ.Any], None] = None
