@@ -9,7 +9,7 @@ setuptools.setup(
     version="1.0.0",
     author="Minghui Huang",
     author_email="2112433114@e.gzhu.edu.cn",
-    description="GRIN+: Towards Fast Yet Effective Machine Unlearning for Imbalanced Medical Data",
+    description="CA-DUP: Towards Fast Yet Effective Machine Unlearning for Imbalanced Medical Data",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/gzhu-hcai/Med-Unlearn",
