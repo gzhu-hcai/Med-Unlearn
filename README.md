@@ -1,6 +1,6 @@
-# CA-DUP: Towards Fast Yet Effective Machine Unlearning for Imbalanced Medical Data
+# GRIN+: Towards Fast Yet Effective Machine Unlearning for Imbalanced Medical Data
 
-This repository is the official implementation of [CA-DUP: Towards Fast Yet Effective Machine Unlearning for Imbalanced Medical Data]()
+This repository is the official implementation of [GRIN+: Towards Fast Yet Effective Machine Unlearning for Imbalanced Medical Data](https://arxiv.org/abs/2609.15571)
 
 ## Abstract
 
